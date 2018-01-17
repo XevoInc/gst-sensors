@@ -1,0 +1,10 @@
+#ifndef GST_SENSORS_CONFIG_H_
+#define GST_SENSORS_CONFIG_H_
+
+#mesondefine PACKAGE
+#mesondefine PACKAGE_VERSION
+#mesondefine GST_LICENSE
+#mesondefine GST_PACKAGE_NAME
+#mesondefine GST_PACKAGE_ORIGIN
+
+#endif /* GST_SENSORS_CONFIG_H_ */
