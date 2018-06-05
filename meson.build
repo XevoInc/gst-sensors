@@ -1,6 +1,6 @@
 project('gst-sensors', 'c',
     version: '0.1',
-    meson_version : '>= 0.36.0',
+    meson_version : '>= 0.45.0',
     license: 'LGPL2+',
     default_options: [
         'c_std=c11',
@@ -19,8 +19,7 @@ add_project_arguments(cflags, language: 'c')
 conf = configuration_data()
 conf.set_quoted('PACKAGE', meson.project_name())
 conf.set_quoted('PACKAGE_VERSION', meson.project_version())
-# meson lacks a project_license() method.
-conf.set_quoted('GST_LICENSE', 'LGPL2')
+conf.set_quoted('GST_LICENSE', meson.project_license())
 conf.set_quoted('GST_PACKAGE_NAME', meson.project_name())
 conf.set_quoted('GST_PACKAGE_ORIGIN', 'github/XevoInc')
 configure_file(
