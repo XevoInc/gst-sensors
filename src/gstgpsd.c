@@ -391,8 +391,8 @@ gst_gpsd_src_create (GstPushSrc * src, GstBuffer ** buffer)
    * the pipeline clock.
    */
   g_get_current_time (&tv);
-  now = GST_TIMEVAL_TO_TIME (tv);
   pipeline_ts = gst_clock_get_time (pipeline_clock);
+  now = GST_TIMEVAL_TO_TIME (tv);
   base_time = GST_ELEMENT_CAST (self)->base_time;
 
   if (self->timestamp_source == TIMESTAMP_GPS) {
